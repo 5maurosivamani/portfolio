@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { FaHome, FaSuitcase } from "react-icons/fa";
+import { FaHome, FaSuitcase, FaUser } from "react-icons/fa";
 import { IoMail } from "react-icons/io5";
 import { MdDarkMode, MdSunny } from "react-icons/md";
 import { Link } from "react-router-dom";
@@ -16,7 +16,7 @@ const NAV_LINKS_DATA = [
   {
     name: "ABOUT",
     path: "/about",
-    icon: FaSuitcase,
+    icon: FaUser,
   },
   {
     name: "CONTACT",
@@ -37,7 +37,7 @@ function NavLinks() {
   const getUniqueId = getId();
 
   return (
-    <div className="h-full w-1/4  fixed top-0 right-0 flex flex-col justify-between items-end p-6">
+    <div className="h-full    fixed top-0 right-0 flex flex-col justify-between items-end p-6">
       <div
         className="bg-gray-700 h-12 w-12 rounded-full flex justify-center items-center hover:bg-light-primary   cursor-pointer transition-all duration-500"
         onClick={() => {

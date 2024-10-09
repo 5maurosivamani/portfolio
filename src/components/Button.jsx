@@ -4,7 +4,7 @@ function Button({ title, classes = "", icon: Icon, ...props }) {
   return (
     <div className="flex">
       <button
-        className={`group h-12  flex items-center justify-between rounded-full border border-primary text-dark-primary hover:text-white  dark:text-white relative ${classes}`}
+        className={`group h-12  flex items-center justify-between rounded-full border border-light-primary text-dark-primary hover:text-white  dark:text-white relative ${classes}`}
         {...props}
       >
         <span className="font-bold uppercase px-5 text-nowrap z-20">

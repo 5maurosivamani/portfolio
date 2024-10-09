@@ -20,17 +20,17 @@ function Home() {
                 alt="profile"
                 className="w-full rounded-md object-fill object-top shadow-lg shadow-black"
               />
-              <div className="bg-white dark:bg-light-primary opacity-80 h-full w-full absolute top-0 right-0 mix-blend-multiply"></div>
+              <div className="bg-white dark:bg-light-primary opacity-50 h-full w-full absolute top-0 right-0 mix-blend-multiply"></div>
             </div>
           </div>
         </div>
         <div className="lg:w-1/2 p-10 lg:p-0 bg-white dark:bg-dark-primary text-dark-primary dark:text-white  ">
           <div className="h-full w-4/5  flex flex-col justify-center  space-y-10">
-            <h1 className="text-3xl md:text-5xl text-primary font-bold uppercase relative leading-[3rem] md:leading-[4rem]">
+            <h1 className="text-3xl md:text-5xl  font-bold uppercase relative leading-[3rem] md:leading-[4rem] text-light-primary">
               <span className="absolute -left-8 top-6 h-1 w-4 rounded bg-light-primary "></span>
               I'm Sivamani N.
               <br />
-              <span className="dark:text-white ">Full Stack Developer</span>
+              <span className="text-light-secondary dark:text-white  ">Full Stack Developer</span>
             </h1>
             <p className="text-[17px] tracking-wide leading-8 md:leading-10 ">
               I am a full stack developer with 3 years of experience,
