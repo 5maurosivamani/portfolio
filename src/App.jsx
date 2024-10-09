@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { About, Contact, ErrorPage, Home } from "./pages";
 import Root from "./layout/Root";
+import { useSelector } from "react-redux";
+import { selectTheme } from "./redux/features/themeSlice";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +23,15 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
+  const theme = useSelector((state) => state.theme.value);
+
+  useEffect(() => {
+    document.body.classList.remove("light", "dark", "custom"); // Remove any existing theme classes
+    document.body.classList.add(theme); // Add the current theme class (light, dark, or custom)
+  }, [theme]);
+
+  console.log("theme", theme);
+
   return <RouterProvider router={router} />;
 }
 
