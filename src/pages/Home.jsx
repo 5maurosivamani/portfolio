@@ -2,8 +2,15 @@ import React from "react";
 import Button from "../components/Button";
 import { MdArrowRight, MdSettings } from "react-icons/md";
 import profileImg from "../assets/profile-2.jpg";
+import { useNavigate } from "react-router-dom";
 
 function Home() {
+  const navigate = useNavigate();
+  
+  const handleClick = () => {
+    navigate("about");
+  };
+
   return (
     <div className="h-full relative">
       <div className="h-14 w-14 rounded-tr-md rounded-br-md bg-white text-slate-600 fixed left-0 top-1/3 md:top-1/2 -translate-y-1/2 flex justify-center items-center z-10">
@@ -30,7 +37,9 @@ function Home() {
               <span className="absolute -left-8 top-6 h-1 w-4 rounded bg-light-primary "></span>
               I'm Sivamani N.
               <br />
-              <span className="text-light-secondary dark:text-white  ">Full Stack Developer</span>
+              <span className="text-light-secondary dark:text-white  ">
+                Full Stack Developer
+              </span>
             </h1>
             <p className="text-[17px] tracking-wide leading-8 md:leading-10 ">
               I am a full stack developer with 3 years of experience,
@@ -43,6 +52,7 @@ function Home() {
               title="More About Me"
               classes="uppercase"
               icon={MdArrowRight}
+              onClick={handleClick}
             />
           </div>
         </div>
