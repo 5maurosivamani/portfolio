@@ -51,7 +51,7 @@ function BioData() {
 
   return (
     <div>
-      <div className="grid grid-cols-2 gap-5 mb-7">
+      <div className="grid md:grid-cols-2 gap-5 mb-7">
         <GenerateList data={BIO_DATA_FIRST} />
         <GenerateList data={BIO_DATA_SECOND} />
       </div>

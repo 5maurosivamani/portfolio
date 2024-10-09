@@ -37,7 +37,7 @@ function NavLinks() {
   const getUniqueId = getId();
 
   return (
-    <div className="h-full    fixed top-0 right-0 flex flex-col justify-between items-end p-6">
+    <div className="h-full    fixed top-0 right-0 flex flex-col justify-between items-end m-6">
       <div
         className="bg-gray-700 h-12 w-12 rounded-full flex justify-center items-center hover:bg-light-primary   cursor-pointer transition-all duration-500"
         onClick={() => {
@@ -51,7 +51,7 @@ function NavLinks() {
           <li key={getUniqueId.next().value}>
             <Link
               to={path}
-              className="flex items-center justify-center hover:justify-end px-3 h-12 w-12 hover:w-auto group rounded-full opacity-90 bg-gray-700   hover:bg-light-primary  transition-all duration-300"
+              className="flex items-center justify-center hover:justify-end px-3 h-12 w-12 hover:w-auto group rounded-full opacity-90 bg-gray-700   hover:bg-light-primary text-white transition-all duration-300"
             >
               <span className=" hidden group-hover:me-2 px-3  opacity-0 group-hover:block group-hover:opacity-100 transition-all duration-300">
                 {name}
