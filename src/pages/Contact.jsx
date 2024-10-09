@@ -40,62 +40,64 @@ function Contact() {
           <PersonalInfo />
         </div>
 
-        <Formik
-          initialValues={initialValues}
-          validationSchema={validationSchema}
-          onSubmit={handleSubmit}
-        >
-          {({ handleChange, handleSubmit, values, errors, touched }) => (
-            <Form
-              onSubmit={handleSubmit}
-              className="flex-1 flex flex-col justify-between space-y-5 "
-            >
-              <div className="grid md:grid-cols-2 space-y-5 md:space-y-0 md:space-x-3  ">
-                {/* Name Input */}
-                <TextInput
-                  placeHolder="YOUR NAME"
-                  name="name"
-                  onChange={handleChange}
-                  value={values.name}
-                  error={touched.name && errors.name}
+        <div>
+          <Formik
+            initialValues={initialValues}
+            validationSchema={validationSchema}
+            onSubmit={handleSubmit}
+          >
+            {({ handleChange, handleSubmit, values, errors, touched }) => (
+              <Form
+                onSubmit={handleSubmit}
+                className="flex-1 flex flex-col justify-between space-y-5 "
+              >
+                <div className="grid md:grid-cols-2 space-y-5 md:space-y-0 md:space-x-3  ">
+                  {/* Name Input */}
+                  <TextInput
+                    placeHolder="YOUR NAME"
+                    name="name"
+                    onChange={handleChange}
+                    value={values.name}
+                    error={touched.name && errors.name}
 
-                  // Show error when field is touched and has errors
+                    // Show error when field is touched and has errors
+                  />
+
+                  {/* Email Input */}
+                  <TextInput
+                    placeHolder="YOUR EMAIL"
+                    name="email"
+                    onChange={handleChange}
+                    value={values.email}
+                    error={touched.email && errors.email}
+                  />
+                </div>
+
+                {/* Subject Input */}
+                <TextInput
+                  placeHolder="YOUR SUBJECT"
+                  name="subject"
+                  onChange={handleChange}
+                  value={values.subject}
+                  error={touched.subject && errors.subject}
                 />
 
-                {/* Email Input */}
+                {/* Message Input */}
                 <TextInput
-                  placeHolder="YOUR EMAIL"
-                  name="email"
+                  placeHolder="YOUR MESSAGE"
+                  name="message"
+                  textarea // To handle multi-line input
                   onChange={handleChange}
-                  value={values.email}
-                  error={touched.email && errors.email}
+                  value={values.message}
+                  error={touched.message && errors.message}
                 />
-              </div>
 
-              {/* Subject Input */}
-              <TextInput
-                placeHolder="YOUR SUBJECT"
-                name="subject"
-                onChange={handleChange}
-                value={values.subject}
-                error={touched.subject && errors.subject}
-              />
-
-              {/* Message Input */}
-              <TextInput
-                placeHolder="YOUR MESSAGE"
-                name="message"
-                textarea // To handle multi-line input
-                onChange={handleChange}
-                value={values.message}
-                error={touched.message && errors.message}
-              />
-
-              {/* Submit Button */}
-              <Button title="Send Message" icon={BsSend} type="submit" />
-            </Form>
-          )}
-        </Formik>
+                {/* Submit Button */}
+                <Button title="Send Message" icon={BsSend} type="submit" />
+              </Form>
+            )}
+          </Formik>
+        </div>
       </div>
     </div>
   );
