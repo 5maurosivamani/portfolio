@@ -10,7 +10,7 @@ function Root() {
 
   return (
     <div
-      className={`flex flex-col h-screen w-full relative transition-all duration-500  ${
+      className={`h-screen w-full relative transition-all duration-500  ${
         isOpen ? "overflow-hidden" : ""
       }`}
     >

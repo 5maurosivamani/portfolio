@@ -6,7 +6,7 @@ import { Accomplishment, BioData, ExperienceAndEducation, Skills } from "../cont
 
 function About() {
   return (
-    <div className="bg-white dark:bg-dark-primary h-full pb-10">
+    <div className="bg-white dark:bg-dark-primary pb-10">
       <PageHeading title="Resume" subTitle={["About", "Me"]} />
 
       <div className="flex flex-col xl:flex-row lg:space-x-16 w-4/5 mx-auto">

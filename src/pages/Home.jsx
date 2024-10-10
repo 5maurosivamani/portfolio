@@ -6,13 +6,13 @@ import { useNavigate } from "react-router-dom";
 
 function Home() {
   const navigate = useNavigate();
-  
+
   const handleClick = () => {
     navigate("about");
   };
 
   return (
-    <div className="h-full">
+    <div className=" h-full">
       <div className="h-14 w-14 rounded-tr-md rounded-br-md bg-white text-slate-600 fixed left-0 top-1/3 md:top-1/2 -translate-y-1/2 flex justify-center items-center z-10">
         <MdSettings size={34} className="animate-spin" />
       </div>
@@ -21,18 +21,18 @@ function Home() {
         <div className="bg-white dark:bg-dark-primary h-full w-full absolute top-0 left-0 -z-[2]"></div>
         <div className="md:h-full lg:w-1/2 ">
           <div className="lg:w-4/5 h-full rounded-md  flex justify-center items-center">
-            <div className="w-3/4 relative">
+            <div className="w-3/4 sm:w-2/4 md:w-2/5 lg:w-3/4 relative">
               <img
                 src={profileImg}
                 alt="profile"
-                className="w-full rounded-md object-fill object-top shadow-lg shadow-black"
+                className=" w-full rounded-md object-fill object-top shadow-lg shadow-black"
               />
               <div className="bg-white dark:bg-light-primary opacity-20 h-full w-full absolute top-0 right-0 mix-blend-multiply"></div>
             </div>
           </div>
         </div>
         <div className="lg:w-1/2 p-10 lg:p-0 bg-white dark:bg-dark-primary text-dark-primary dark:text-white  ">
-          <div className="h-full w-4/5  flex flex-col justify-center  space-y-10">
+          <div className="h-full w-4/5  flex flex-col justify-center  space-y-10 mx-5">
             <h1 className="text-3xl md:text-5xl  font-bold uppercase relative leading-[3rem] md:leading-[4rem] text-light-primary">
               <span className="absolute -left-8 top-6 h-1 w-4 rounded bg-light-primary "></span>
               I'm Sivamani N.
