@@ -31,7 +31,7 @@ function NavLinks() {
   const dispatch = useDispatch();
   const selectedTheme = useSelector(selectTheme);
   const [theme, setTheme] = useState(selectedTheme);
-  const selectedIsOpen = useSelector(state => state.sidebar.value)
+  const selectedIsOpen = useSelector((state) => state.sidebar.value);
   const [isOpen, setIsOpen] = useState(selectedIsOpen);
 
   useEffect(() => {
@@ -43,6 +43,8 @@ function NavLinks() {
   }, [isOpen]);
 
   const getUniqueId = getId();
+
+  console.log("usopne", isOpen);
 
   return (
     <div>
@@ -64,21 +66,21 @@ function NavLinks() {
         </ul>
       </div>
       <div
-        className={`w-full h-screen fixed top-0 left-0 p-10 py-20 bg-white dark:bg-light-secondary z-50 transition-all duration-700 ${
+        className={`w-full h-screen fixed top-0 p-10 py-20 bg-white dark:bg-light-secondary z-50 transition-all duration-700 ${
           isOpen ? "left-0" : "-left-full"
         }`}
       >
         <ul>
           {NAV_LINKS_DATA?.map(({ name, path, icon: Icon }) => (
             <li
-              className="flex items-center border-b  border-b-slate-200 py-5"
+              className="flex items-center border-b  border-b-slate-200 "
               key={getUniqueId.next().value}
               onClick={() => {
                 setIsOpen(false);
               }}
             >
               <Icon size={28} />
-              <Link to={path} className="ms-3 text-2xl ">
+              <Link to={path} className="ms-3 text-2xl py-5 w-full">
                 {name}
               </Link>
             </li>

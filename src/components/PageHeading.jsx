@@ -3,7 +3,7 @@ import React from "react";
 function PageHeading({ title, subTitle }) {
   return (
     <div>
-      <div className="relative text-center uppercase my-5 md:my-2">
+      <div className="relative text-center uppercase py-5 md:py-2">
         <h1 className="text-[3.1rem] sm:text-[5.5rem] md:text-[7rem] font-extrabold tracking-wider text-gray-500 opacity-15">
           {title}
         </h1>

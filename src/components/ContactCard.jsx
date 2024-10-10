@@ -8,7 +8,7 @@ function ContactCard({ icon: Icon, label, value }) {
       </div>
       <div className="ms-2">
         <p className="opacity-75 uppercase">{label}</p>
-        <p className="font-semibold opacity-90 lowercase">{value}</p>
+        <p className="font-semibold opacity-90 lowercase text-wrap">{value}</p>
       </div>
     </div>
   );

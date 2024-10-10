@@ -1,7 +1,7 @@
 import React from "react";
 
 import { MdDownload } from "react-icons/md";
-import { getId } from "../utils";
+import { downloadFile, getId } from "../utils";
 import Button from "../components/Button";
 
 const generateUniqueId = getId();
@@ -55,7 +55,13 @@ function BioData() {
         <GenerateList data={BIO_DATA_FIRST} />
         <GenerateList data={BIO_DATA_SECOND} />
       </div>
-      <Button title="Download CV" icon={MdDownload} />
+      <Button
+        title="Download CV"
+        icon={MdDownload}
+        onClick={() => {
+          downloadFile("https://github.com/user-attachments/files/17320852/Sivamani_CV.pdf", "sivamani_cv");
+        }}
+      />
     </div>
   );
 }

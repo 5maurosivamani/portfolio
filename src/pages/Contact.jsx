@@ -35,8 +35,8 @@ function Contact() {
     <div className="h-full bg-white dark:bg-dark-primary text-dark-primary dark:text-white">
       <PageHeading title="Contact" subTitle={["Get In", "Touch"]} />
 
-      <div className="w-full md:w-5/6 mx-auto  mt-2 py-10 px-8 sm:p-10  flex flex-col-reverse md:flex-row  bg-white dark:bg-dark-primary">
-        <div className="w-full md:w-1/2 mt-10 md:mt-0 ">
+      <div className="w-full md:w-5/6 mx-auto py-10  px-8 sm:p-10 sm:pt-5  flex flex-col-reverse md:flex-row space-x-0 md:space-x-5  bg-white dark:bg-dark-primary">
+        <div className="w-full md:w-1/2 mt-10 md:mt-0">
           <PersonalInfo />
         </div>
 

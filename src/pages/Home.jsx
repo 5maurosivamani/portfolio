@@ -12,7 +12,7 @@ function Home() {
   };
 
   return (
-    <div className="h-full relative">
+    <div className="h-full">
       <div className="h-14 w-14 rounded-tr-md rounded-br-md bg-white text-slate-600 fixed left-0 top-1/3 md:top-1/2 -translate-y-1/2 flex justify-center items-center z-10">
         <MdSettings size={34} className="animate-spin" />
       </div>
@@ -27,7 +27,7 @@ function Home() {
                 alt="profile"
                 className="w-full rounded-md object-fill object-top shadow-lg shadow-black"
               />
-              <div className="bg-white dark:bg-light-primary opacity-50 h-full w-full absolute top-0 right-0 mix-blend-multiply"></div>
+              <div className="bg-white dark:bg-light-primary opacity-20 h-full w-full absolute top-0 right-0 mix-blend-multiply"></div>
             </div>
           </div>
         </div>
