@@ -23,7 +23,7 @@ function Home() {
         <div className="bg-white dark:bg-dark-primary h-full w-full absolute top-0 left-0 -z-[2]"></div>
         <div className="md:h-full lg:w-1/2 my-10 lg:my-0">
           <div className="lg:w-4/5 h-full rounded-md  flex justify-center items-center">
-            <div className="w-3/4 sm:w-2/4 md:w-2/5 lg:w-3/4 relative">
+            <div className="w-3/4 sm:w-2/4 md:w-2/5 lg:w-3/4 relative transition-all duration-500">
               
               {profileImg ?<img
                 src={profileImg}
