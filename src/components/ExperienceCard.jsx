@@ -9,10 +9,10 @@ function ExperienceCard({
 }) {
   return (
     <div className="border-l ps-10 flex flex-col gap-4 items-start relative text-slate-500 dark:text-gray-500 ">
-      <p className="p-2 px-4 rounded-full bg-gray-200  font-semibold">
+      <p className="p-1 md:p-2 px-4 md:px-6 text-xs sm:text-sm rounded-full bg-gray-200  font-semibold">
         {duration}
       </p>
-      <h2 className="text-xl font-semibold">
+      <h2 className="text-base sm:text-lg md:text-xl font-semibold">
         {position} - <span className="font-bold uppercase">{company}</span>
       </h2>
       <p className="w-full md:w-2/3">{description}</p>
