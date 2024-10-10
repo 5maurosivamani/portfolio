@@ -4,6 +4,8 @@ import { MdArrowRight, MdSettings } from "react-icons/md";
 import profileImg from "../assets/profile-2.jpg";
 import { useNavigate } from "react-router-dom";
 
+// const profileImg= false;
+
 function Home() {
   const navigate = useNavigate();
 
@@ -22,11 +24,12 @@ function Home() {
         <div className="md:h-full lg:w-1/2 my-10 lg:my-0">
           <div className="lg:w-4/5 h-full rounded-md  flex justify-center items-center">
             <div className="w-3/4 sm:w-2/4 md:w-2/5 lg:w-3/4 relative">
-              <img
+              
+              {profileImg ?<img
                 src={profileImg}
                 alt="profile"
                 className=" w-full rounded-md object-fill object-top shadow-lg shadow-black"
-              />
+              />:<div className="h-80 w-full skeleton" />}
               <div className="bg-white dark:bg-light-primary opacity-20 h-full w-full absolute top-0 right-0 mix-blend-multiply"></div>
             </div>
           </div>
