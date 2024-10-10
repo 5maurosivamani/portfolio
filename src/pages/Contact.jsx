@@ -32,7 +32,7 @@ function Contact() {
   };
 
   return (
-    <div className="h-full bg-white dark:bg-dark-primary text-dark-primary dark:text-white">
+    <div className="h-full overflow-y-auto bg-white dark:bg-dark-primary text-dark-primary dark:text-white">
       <PageHeading title="Contact" subTitle={["Get In", "Touch"]} />
 
       <div className="w-full md:w-5/6 mx-auto py-10  px-8 sm:p-10 sm:pt-5  flex flex-col-reverse md:flex-row space-x-0 md:space-x-5  bg-white dark:bg-dark-primary">
