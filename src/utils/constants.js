@@ -1,0 +1,1 @@
+export const CONTACT_FORM_URL = "https://portfolio-server-three-beige.vercel.app/contact";
