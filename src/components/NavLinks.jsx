@@ -61,7 +61,7 @@ function NavLinks() {
         </ul>
       </div>
       <div
-        className={`w-full h-screen fixed top-0 p-10 py-20 bg-white dark:bg-light-secondary z-50 transition-all duration-700 ${
+        className={`w-full h-screen fixed top-0 p-10 py-20 text-gray-700 dark:text-white bg-white dark:bg-light-secondary z-50 transition-all duration-700 ${
           selectedIsOpen ? "left-0" : "-left-full"
         }`}
       >
