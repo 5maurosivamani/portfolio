@@ -35,9 +35,10 @@ function ContactForm() {
       .required("Message is required"),
   });
 
-  const handleSubmit = (values) => {
+  const handleSubmit = (values, { resetForm }) => {
     setIsSubmitted(true);
 
+    console.log("resetForm", resetForm);
     // Send the form data to your backend API or use a third-party service here
     fetch(CONTACT_FORM_URL, {
       method: "POST",
@@ -58,6 +59,7 @@ function ContactForm() {
       })
       .finally(() => {
         setIsSubmitted(false);
+        resetForm();
       });
   };
   return (
@@ -66,7 +68,7 @@ function ContactForm() {
       validationSchema={validationSchema}
       onSubmit={handleSubmit}
     >
-      {({ handleChange, handleSubmit, values, errors, touched }) => (
+      {({ handleChange, handleSubmit, values, errors, touched, resetForm }) => (
         <Form
           onSubmit={handleSubmit}
           className="flex-1 flex flex-col justify-between space-y-5 "

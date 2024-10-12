@@ -21,7 +21,11 @@ function Button({ title, classes = "", icon: Icon, loading, ...props }) {
             <Icon size={24} />
           )}
         </div>
-        <div className="h-full absolute top-0 right-0 w-12 group-hover:w-full transition-[width] duration-400 bg-light-primary  rounded-full"></div>
+        <div
+          className={`h-full absolute top-0 right-0 w-12 ${
+            loading ? "" : "group-hover:w-full"
+          } transition-[width] duration-400 bg-light-primary  rounded-full`}
+        ></div>
       </button>
     </div>
   );
