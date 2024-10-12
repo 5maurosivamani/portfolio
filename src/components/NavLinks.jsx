@@ -3,11 +3,11 @@ import { FaHome, FaSuitcase, FaUser } from "react-icons/fa";
 import { IoMail } from "react-icons/io5";
 import { MdClose, MdDarkMode, MdSunny } from "react-icons/md";
 import { Link } from "react-router-dom";
-import { selectTheme, toggleTheme } from "../redux/features/themeSlice";
+import { toggleTheme } from "../redux/features/themeSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { getId } from "../utils";
 import { HiMiniBars3CenterLeft } from "react-icons/hi2";
-import { toggleIsOpen } from "../redux/features/sideBarSlice";
+import { setIsOpen, toggleIsOpen } from "../redux/features/sideBarSlice";
 
 const NAV_LINKS_DATA = [
   {
@@ -29,22 +29,17 @@ const NAV_LINKS_DATA = [
 
 function NavLinks() {
   const dispatch = useDispatch();
-  const selectedTheme = useSelector(selectTheme);
-  const [theme, setTheme] = useState(selectedTheme);
+  const selectedTheme = useSelector((state) => state.theme.value);
   const selectedIsOpen = useSelector((state) => state.sidebar.value);
-  const [isOpen, setIsOpen] = useState(selectedIsOpen);
 
   useEffect(() => {
     dispatch(toggleTheme());
-  }, [theme]);
+  }, []);
 
-  useEffect(() => {
-    dispatch(toggleIsOpen());
-  }, [isOpen]);
 
   const getUniqueId = getId();
 
-  console.log("usopne", isOpen);
+  console.log("is-open => ", selectedIsOpen);
 
   return (
     <div>
@@ -67,7 +62,7 @@ function NavLinks() {
       </div>
       <div
         className={`w-full h-screen fixed top-0 p-10 py-20 bg-white dark:bg-light-secondary z-50 transition-all duration-700 ${
-          isOpen ? "left-0" : "-left-full"
+          selectedIsOpen ? "left-0" : "-left-full"
         }`}
       >
         <ul>
@@ -76,7 +71,7 @@ function NavLinks() {
               className="flex items-center border-b  border-b-slate-200 "
               key={getUniqueId.next().value}
               onClick={() => {
-                setIsOpen(false);
+                dispatch(setIsOpen(false));
               }}
             >
               <Icon size={28} />
@@ -89,16 +84,16 @@ function NavLinks() {
       </div>
       <div className="flex flex-col space-y-5 fixed right-5 top-5 z-50 ">
         <RoundedButton
-          icon={isOpen ? MdClose : HiMiniBars3CenterLeft}
+          icon={selectedIsOpen ? MdClose : HiMiniBars3CenterLeft}
           onClick={() => {
-            setIsOpen((pre) => !pre);
+            dispatch(toggleIsOpen());
           }}
           classes="lg:hidden mx-6"
         />
         <RoundedButton
-          icon={theme === "dark" ? MdSunny : MdDarkMode}
+          icon={selectedTheme === "dark" ? MdSunny : MdDarkMode}
           onClick={() => {
-            setTheme((pre) => (pre === "dark" ? "light" : "dark"));
+            dispatch(toggleTheme());
           }}
           classes="mx-6"
         />
@@ -115,8 +110,6 @@ const RoundedButton = ({ icon: Icon, classes, ...props }) => {
       className={`bg-gray-700 h-12 w-12 rounded-full flex justify-center items-center hover:bg-light-primary text-white  cursor-pointer transition-all duration-500 ${classes}`}
       {...props}
     >
-      {/* <Link>{theme === "dark" ? <MdSunny /> : <MdDarkMode />}</Link>
-       */}
       <Icon size={24} />
     </div>
   );

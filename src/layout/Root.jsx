@@ -6,8 +6,6 @@ import { useSelector } from "react-redux";
 function Root() {
   const isOpen = useSelector((state) => state.sidebar.value);
 
-  console.log("open", isOpen);
-
   return (
     <div
       className={`h-screen w-full relative transition-all duration-500  ${
