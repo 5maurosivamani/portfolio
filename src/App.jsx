@@ -3,7 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { About, Contact, ErrorPage, Home } from "./pages";
 import Root from "./layout/Root";
 import { useDispatch, useSelector } from "react-redux";
-import { selectTheme } from "./redux/features/themeSlice";
+import { selectTheme, setTheme } from "./redux/features/themeSlice";
 import { setWindowWidth } from "./redux/features/utilsSlice";
 
 const router = createBrowserRouter([
@@ -26,6 +26,16 @@ const router = createBrowserRouter([
 function App() {
   const theme = useSelector((state) => state.theme.value);
   const dispatch = useDispatch();
+  const isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+  useEffect(() => {
+    console.log("isDark Mode", isDarkMode);
+    if (isDarkMode) {
+      dispatch(setTheme("dark"));
+    } else {
+      dispatch(setTheme("light"));
+    }
+  }, []);
 
   useEffect(() => {
     document.body.classList.remove("light", "dark", "custom"); // Remove any existing theme classes

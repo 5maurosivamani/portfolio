@@ -3,6 +3,7 @@ import { configureStore } from "@reduxjs/toolkit";
 import themeReducer from "./features/themeSlice.js"; // Example slice
 import sideBarReducer from "./features/sideBarSlice.js";
 import utilsReducer from "./features/utilsSlice.js";
+import { PRODUCTION } from "../utils/constants.js";
 
 const store = configureStore({
   reducer: {
@@ -10,6 +11,8 @@ const store = configureStore({
     sidebar: sideBarReducer,
     utils: utilsReducer,
   },
+  devTools: PRODUCTION !== true,
+  
 });
 
 export default store;
