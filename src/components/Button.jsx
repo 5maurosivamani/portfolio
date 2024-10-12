@@ -5,7 +5,7 @@ function Button({ title, classes = "", icon: Icon, loading, ...props }) {
     <div className="flex">
       <button
         className={`group h-12  flex items-center justify-between rounded-full border border-light-primary text-dark-primary hover:text-white  dark:text-white relative ${
-          loading && "cursor-wait"
+          loading && "cursor-no-drop"
         } ${classes}`}
         disabled={loading}
         {...props}
