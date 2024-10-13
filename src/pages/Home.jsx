@@ -34,9 +34,9 @@ function Home() {
             </div>
           </div>
         </div>
-        <div className="lg:w-1/2 p-10 lg:p-0 bg-white dark:bg-dark-primary text-dark-primary dark:text-white  ">
-          <div className="h-full w-4/5  flex flex-col justify-center  space-y-10 mx-5">
-            <h1 className="text-3xl md:text-5xl  font-bold uppercase relative leading-[3rem] md:leading-[4rem] text-light-primary">
+        <div className="lg:w-1/2 px-5 py-10 lg:p-0 bg-white dark:bg-dark-primary text-dark-primary dark:text-white">
+          <div className="h-full w-full md:w-4/5  flex flex-col justify-center  space-y-10 md:mx-5 ps-3 md:px-0">
+            <h1 className="text-[1.67rem] md:text-5xl ms-3 font-bold uppercase relative leading-[3rem] md:leading-[4rem] text-light-primary">
               <span className="absolute -left-8 top-6 h-1 w-4 rounded bg-light-primary "></span>
               I'm Sivamani N.
               <br />
@@ -44,7 +44,7 @@ function Home() {
                 Full Stack Developer
               </span>
             </h1>
-            <p className="text-[17px] tracking-wide leading-8 md:leading-10 ">
+            <p className="text-[16px] md:text-[17px] tracking-wide leading-8 md:leading-10 ">
               I am a full stack developer with 3 years of experience,
               specializing in React, Node.js, Express, and MySQL. I’m passionate
               about building dynamic, user-friendly applications and solving
