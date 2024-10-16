@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "../components/Button";
 import { MdArrowRight, MdSettings } from "react-icons/md";
-import profileImg from "../assets/profile-2.jpg";
+import profileImg from "../assets/profile-black.png";
 import { useNavigate } from "react-router-dom";
 
 // const profileImg= false;
@@ -23,20 +23,22 @@ function Home() {
         <div className="bg-white dark:bg-dark-primary h-full w-full absolute top-0 left-0 -z-[2]"></div>
         <div className="md:h-full lg:w-1/2 my-10 lg:my-0  transition-all duration-500">
           <div className="lg:w-4/5 h-full rounded-md  flex justify-center items-center">
-            <div className="w-3/4 sm:w-2/4 md:w-2/5 lg:w-3/4 relative">
-              
-              {profileImg ?<img
-                src={profileImg}
-                alt="profile"
-                className=" w-full rounded-md object-fill object-top shadow-lg shadow-black"
-              />:<div className="h-80 w-full skeleton" />}
-              <div className="bg-white dark:bg-light-primary opacity-20 h-full w-full absolute top-0 right-0 mix-blend-multiply"></div>
+            <div className="w-3/4 sm:w-2/4 md:w-2/5 lg:w-3/4 relative shadow-lg shadow-black overflow-hidden rounded-3xl">
+              {profileImg ? (
+                <img
+                  src={profileImg}
+                  alt="profile"
+                  className=" w-full   object-top  transform transition-transform duration-300 scale-[1.1]"
+                />
+              ) : (
+                <div className="h-80 w-full skeleton" />
+              )}
             </div>
           </div>
         </div>
         <div className="lg:w-1/2 px-5 py-10 lg:p-0 bg-white dark:bg-dark-primary text-dark-primary dark:text-white">
           <div className="h-full w-full md:w-4/5  flex flex-col justify-center  space-y-10 md:mx-5 ps-3 md:px-0">
-            <h1 className="text-[1.67rem] md:text-5xl ms-3 font-bold uppercase relative leading-[3rem] md:leading-[4rem] text-light-primary">
+            <h1 className="text-[1.67rem] md:text-5xl ms-3 font-bold uppercase relative leading-[3rem] md:leading-[4rem] text-light-primary text-shadow">
               <span className="absolute -left-8 top-6 h-1 w-4 rounded bg-light-primary "></span>
               I'm Sivamani N.
               <br />

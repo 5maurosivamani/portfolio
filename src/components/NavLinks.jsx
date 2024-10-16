@@ -49,7 +49,7 @@ function NavLinks() {
             <li key={getUniqueId.next().value}>
               <Link
                 to={path}
-                className="flex items-center justify-center hover:justify-end px-3 h-12 w-12 hover:w-auto group rounded-full opacity-90 bg-gray-700   hover:bg-light-primary text-white transition-all duration-300"
+                className="flex items-center justify-center hover:justify-end px-3 h-12 w-12 hover:w-auto group rounded-full opacity-90 bg-gray-700   hover:bg-light-primary text-white transition-all duration-800"
               >
                 <span className=" hidden group-hover:me-2 px-3  opacity-0 group-hover:block group-hover:opacity-100 transition-all duration-300">
                   {name}
