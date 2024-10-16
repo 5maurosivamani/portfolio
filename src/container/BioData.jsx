@@ -59,7 +59,7 @@ function BioData() {
         title="Download CV"
         icon={MdDownload}
         onClick={() => {
-          downloadFile("https://github.com/user-attachments/files/17320852/Sivamani_CV.pdf", "sivamani_cv");
+          downloadFile("https://github.com/user-attachments/files/17389575/Sivamani_CV.pdf", "sivamani_cv");
         }}
       />
     </div>
