@@ -28,7 +28,7 @@ function Home() {
                 <img
                   src={profileImg}
                   alt="profile"
-                  className=" w-full   object-top  transform transition-transform duration-300 scale-[1.1]"
+                  className=" w-full   object-top  transform transition-transform duration-300 scale-[1.5]  translate-y-[6rem] lg:translate-y-[7rem] xl:translate-y-[7.5rem] translate-x-4"
                 />
               ) : (
                 <div className="h-80 w-full skeleton" />
