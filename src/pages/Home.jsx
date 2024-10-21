@@ -1,10 +1,11 @@
 import React from "react";
 import Button from "../components/Button";
 import { MdArrowRight, MdSettings } from "react-icons/md";
-import profileImg from "../assets/profile-black.png";
+import profileImg from "../assets/profile-black.webp";
 import { useNavigate } from "react-router-dom";
 
 // const profileImg= false;
+// const profileImg = React.lazy(import("../assets/profile-black.webp"));
 
 function Home() {
   const navigate = useNavigate();
@@ -29,6 +30,7 @@ function Home() {
                   src={profileImg}
                   alt="profile"
                   className=" w-full   object-top  transform transition-transform duration-300 scale-[1.5]  translate-y-[6rem] lg:translate-y-[7rem] xl:translate-y-[7.5rem] translate-x-4"
+                  loading="lazy"
                 />
               ) : (
                 <div className="h-80 w-full skeleton" />

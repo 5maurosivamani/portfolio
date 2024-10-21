@@ -1,10 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { About, Contact, ErrorPage, Home } from "./pages";
 import Root from "./layout/Root";
 import { useDispatch, useSelector } from "react-redux";
-import { selectTheme, setTheme } from "./redux/features/themeSlice";
+import { setTheme } from "./redux/features/themeSlice";
 import { setWindowWidth } from "./redux/features/utilsSlice";
+import { LazyComponent as Lazy } from "./components";
+
+const Home = React.lazy(() => import("./pages/Home"));
+const About = React.lazy(() => import("./pages/About"));
+const Contact = React.lazy(() => import("./pages/Contact"));
+const ErrorPage = React.lazy(() => import("./pages/ErrorPage"));
 
 const router = createBrowserRouter([
   {
@@ -12,9 +17,18 @@ const router = createBrowserRouter([
     element: <Root />,
     errorElement: <ErrorPage />,
     children: [
-      { path: "/", element: <Home /> },
-      { path: "/about", element: <About /> },
-      { path: "/contact", element: <Contact /> },
+      {
+        path: "/",
+        element: <Lazy component={<Home />} />,
+      },
+      {
+        path: "/about",
+        element: <Lazy component={<About />} />,
+      },
+      {
+        path: "/contact",
+        element: <Lazy component={<Contact />} />,
+      },
     ],
   },
   {

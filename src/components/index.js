@@ -6,3 +6,4 @@ export { default as SocialMedia } from "./SocialMedia";
 export { default as TextInput } from "./TextInput";
 export { default as SkillCard } from "./SkillCard";
 export { default as ExperienceCard } from "./ExperienceCard";
+export { default as LazyComponent } from "./LazyComponent";
