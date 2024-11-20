@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "motion/react";
 import { getId } from "../utils";
 
 function Accomplishment() {
@@ -26,7 +27,11 @@ function Accomplishment() {
   return (
     <div className="grid sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-2 gap-5">
       {ACCOMPLISHMENT_DATA?.map((data) => (
-        <AccomplishmentCard title={data.title} count={data.count} key={getUniqueId.next().value} />
+        <AccomplishmentCard
+          title={data.title}
+          count={data.count}
+          key={getUniqueId.next().value}
+        />
       ))}
     </div>
   );
@@ -36,7 +41,10 @@ export default Accomplishment;
 
 const AccomplishmentCard = ({ title, count }) => {
   return (
-    <div className="border border-gray-400 rounded p-10 text-dark-primary dark:text-white">
+    <motion.div
+      whileHover={{ scale: 1.1 }}
+      className="border border-gray-400 rounded p-10 text-dark-primary dark:text-white hover:shadow-lg"
+    >
       <h1 className="text-[2.5rem] md:text-[3rem] font-extrabold text-light-primary">
         {count}
         <sup>+</sup>
@@ -45,6 +53,6 @@ const AccomplishmentCard = ({ title, count }) => {
         <span className="h-[1px] w-6 rounded bg-dark-primary absolute -left-8 top-1/2 -translate-y-1/2"></span>
         {title}
       </p>
-    </div>
+    </motion.div>
   );
 };

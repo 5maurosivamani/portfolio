@@ -1,13 +1,15 @@
+import { motion } from "motion/react";
 import React from "react";
 
 function Button({ title, classes = "", icon: Icon, loading, ...props }) {
   return (
-    <div className="flex">
-      <button
+    <motion.div className="flex">
+      <motion.button
         className={`group h-12  flex items-center justify-between rounded-full border border-light-primary text-dark-primary hover:text-white  dark:text-white relative ${
           loading && "cursor-no-drop"
         } ${classes}`}
         disabled={loading}
+        whileHover={{ scale: 1.1 }}
         {...props}
       >
         <span className="font-bold uppercase px-5 text-nowrap z-[1]">
@@ -26,8 +28,8 @@ function Button({ title, classes = "", icon: Icon, loading, ...props }) {
             loading ? "" : "group-hover:w-full"
           } transition-[width] duration-400 bg-light-primary  rounded-full`}
         ></div>
-      </button>
-    </div>
+      </motion.button>
+    </motion.div>
   );
 }
 
