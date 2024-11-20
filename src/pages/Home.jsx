@@ -74,7 +74,7 @@ function Home() {
             <motion.div
               animate={{ x: 0 }}
               initial={{ x: 200 }}
-              transition={{ duration: 0.9, delay: 0.2 }}
+              transition={{ duration: 0.9 }}
             >
               <Button
                 title="More About Me"
